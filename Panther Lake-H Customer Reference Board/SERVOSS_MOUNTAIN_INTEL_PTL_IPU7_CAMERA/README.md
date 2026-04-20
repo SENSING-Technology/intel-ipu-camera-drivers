@@ -1,9 +1,9 @@
 
-#### Linux kernel version
+## Linux kernel version
 
 * Linux 6.17.11
 
-#### Supported camera list
+## Supported camera list
 * SG2-AR0233C-5200-G2A-HXXX
 * SG3S-ISX031C-GMSL2F-HXXX
 * SHF3L
@@ -14,19 +14,19 @@
 * SG8-ISX028C-G2G-HXXX
 * SG3-ISX031C-MIPI-HXXX
 
-#### Quick Start
+## Quick Start
 
-1.Install Kernel
+#### 1. Install Kernel
 
 Copy the driver package to the Panther Lake-H CRB (Ubuntu 24.04), then run the command below to install kernel.
 
 ```
-cd SERVOSS_MOUNTAIN_INTEL_IPU7_YUVx8/
+cd SERVOSS_MOUNTAIN_INTEL_PTL_IPU7_CAMERA/
 sudo dpkg -i deb/linux-headers-6.17.11-mainline-tracking-260128t080735z_6.17.11-1000_amd64.deb
 sudo dpkg -i deb/linux-image-6.17.11-mainline-tracking-260128t080735z_6.17.11-1000_amd64.deb
 ```
 
-2.Update GRUB configuration
+#### 2. Update GRUB configuration
 
 By default, the system uses the latest kernel version. After installation, update GRUB to make sure the installed kernel is used.
 
@@ -60,7 +60,7 @@ After rebooting, check the kernel version.
 uname -a
 ```
 
-3.Install IPU Components
+#### 3. Install IPU Components
 
 ```
 cd ipu
@@ -86,41 +86,37 @@ sudo dpkg -i --force-overwrite ipu75xafw_*.deb
 sudo dpkg -i --force-overwrite libcamhal_*.deb
 ```
 
-4.Install the camera configuration file
+#### 4. Install the camera configuration file
 
 ```
-cd SERVOSS_MOUNTAIN_INTEL_IPU7_YUVx8
+cd SERVOSS_MOUNTAIN_INTEL_PTL_IPU7_CAMERA
 cd config/ipu75xa/
 sudo cp libcamhal_configs.json /etc/camera/ipu75xa/libcamhal_configs.json
 sudo cp sensors/* /etc/camera/ipu75xa/sensors/
 ```
 
-5.Bring UP the GMSL Camera
+#### 5. Bring UP the GMSL Camera
 
 Note: The configuration files in /etc/camera/ipu75xa/sensors/ default to 4 cameras per MAX96724 chip. If fewer than 4 cameras are connected, please update the configuration accordingly.
 
-5.1. Hardware Connection
+5.1 Hardware Connection
 
 The camera module supports connectivity via MIPI D-PHY or C-PHY physical layer interfaces.
 
 5.1.1 D-PHY Hardware Connection
 
 D-PHY Jumper configuration
-![D-PHY Setup](pictrue/dphy_jumper.png)
 
 D-PHY Setup, C-PHY to D-PHY convert board is required.
-![D-PHY Setup](pictrue/dphy_setup.jpg)
 
 5.1.2 C-PHY Hardware Connection
 
 C-PHY Jumper configuration
-![C-PHY Setup](pictrue/cphy_jumper.png)
 
 C-PHY Setup
-![C-PHY Setup](pictrue/cphy_setup.jpg)
 
 
-5.2. BIOS Setting
+5.2 BIOS Setting
 
 Intel Advanced Menu --> System Agent (SA) Configuatation --> MIPI Camera Configuration
 
@@ -169,7 +165,7 @@ Set the Link options as follows:
 | Flash Driver Selection | Disabled | Disabled | Disabled | Disabled |
 
 
-5.3. Bring up GMSL Camera
+5.3 Bring up GMSL Camera
 
 5.3.1 Configure environment variables
 
@@ -298,12 +294,11 @@ width: 3840
 height: 2160
 ```
 
-6.Bring up MIPI Camera
+#### 6. Bring up MIPI Camera
 
 6.1 Hardware Connection
 
 MIPI Camera Setup, C-PHY to D-PHY convert board is required.
-![MIPI Camera Setup](pictrue/mipi_camera_setup.jpg)
 
 6.2 BIOS Setting
 
@@ -322,7 +317,7 @@ Set the Control Logic options as follows:
 | Input Clock | 19.2MHz | 19.2MHz |
 | PCH Clock Source | IMGCLKOUT_0 | IMGCLKOUT_1 |
 | Number of GPIOs | 1 | 1 |
-| **GPIO Pin 0** | | |
+| GPIO Pin 0 | | |
 | Group Pad Number | 10 | 1 |
 | Group Number | C_D_E_H | C_D_E_H |
 | Com Number | COM1 | COM1 |
@@ -371,7 +366,7 @@ Set the Link options as follows:
 | Customize Device ID Number | 19 | 19 |
 | Flash Driver Selection | Disabled | Disabled |
 
-6.3. Bring up MIPI Camera
+6.3 Bring up MIPI Camera
 
 6.3.1 Configure environment variables
 
