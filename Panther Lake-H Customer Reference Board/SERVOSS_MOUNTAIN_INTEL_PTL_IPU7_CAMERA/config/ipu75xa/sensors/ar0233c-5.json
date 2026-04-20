@@ -1,0 +1,61 @@
+//
+// Copyright (C) 2025 Intel Corporation
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+{
+  "CameraSettings": {
+    "Sensor": [
+      {
+        "name": "ar0233c-5",
+        "description": "ar0233c as sensor.",
+        "vcCount": 4,
+        "vcId": 0,
+        "vcGroupId": 0,
+        "MediaCtlConfig": [
+          {
+            "id":  0,
+            "configMode": "AUTO",
+            "output": [1920, 1080],
+            "format": "V4L2_PIX_FMT_UYVY",
+            "sensorCommonConfig": "ar0233c-1",
+            "videonode": [
+              {
+                "name": "Intel IPU7 ISYS Capture 16", "videoNodeType": "VIDEO_GENERIC"
+              },
+              {
+                "name": "Intel IPU7 CSI2 2", "videoNodeType": "VIDEO_ISYS_RECEIVER"
+              },
+              {
+                "name": "ar0233c a-2", "videoNodeType": "VIDEO_PIXEL_ARRAY"
+              }
+            ]
+          }
+        ],
+        "StaticMetadata": {
+          "supportedStreamConfig": [
+            {
+              "format": "V4L2_PIX_FMT_UYVY", "size": [1920, 1080], "field": 0, "mcId": 0
+            }
+          ]
+        },
+
+        "supportedISysSizes": [[1920, 1080]],
+        "supportedISysFormat": ["V4L2_PIX_FMT_UYVY"],
+        "enableAIQ": false,
+        "usePSysProcessor": false
+      }
+    ]
+  }
+}
