@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (C) 2024-2025 Intel Corporation.
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<CameraSettings>
+    <Common>
+        <version value="1.0"/>
+        <platform value="IPU6"/>
+        <!-- The value format of availableSensors is "sensor name"-wf/uf-"CSI port ID". -->
+        <availableSensors value="ov05c10-uf-0,ov05c10-uf-4,ov08x40-uf-0,ov08x40-uf-4,
+                                 ov13b10-uf-0,ov13b10-wf-4,ov5675-uf-4,ov01a1s-uf-0,
+                                 ov01a10-uf-0,ov01a10-uf-4,
+                                 ov02c10-uf-0,ov02c10-uf-1,ov02c10-uf-4,
+                                 ov02e10-uf-1,ov02e10-uf-4,
+                                 hm2170-uf-0,hm2170-uf-1,hm2170-uf-4,
+                                 hm2172-uf-1,hm2172-uf-4,hi556-uf-1,
+                                 imx390-1-0,imx390-2-0,imx390-3-0,imx390-4-0,
+                                 imx390-5-4,imx390-6-4,ar0234-1-0,ar0234-2-4,
+                                 isx031-1-0,isx031-2-0,isx031-3-4,isx031-4-4,
+				 ar0233c-1-0,ar0233c-2-0,ar0233c-3-4,ar0233c-4-4,
+				 isx031f-1-0,isx031f-2-0,isx031f-3-4,isx031f-4-4,
+				 imx490c-1-0,imx490c-2-0,imx490c-3-4,imx490c-4-4,
+				 isx028c-1-0,isx028c-2-0,isx028c-3-4,isx028c-4-4,
+				 ar0820c-1-0,ar0820c-2-0,ar0820c-3-4,ar0820c-4-4,
+				 shf3l-1-0,shf3l-2-0,shf3l-3-4,shf3l-4-4,
+				 shw3h-1-0,shw3h-2-0,shw3h-3-4,shw3h-4-4,
+				 lt6911uxc,lt6911uxe-1-0,lt6911uxe-2-4,
+				 s36-1-0,s36-2-0,s36-3-4,s36-4-4,
+				 isx031c_mipi-1-0,isx031c_mipi-2-0,
+                                 external_source,ar0234_usb,"/>
+    </Common>
+</CameraSettings>

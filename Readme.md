@@ -7,6 +7,7 @@ Users of SENSING cameras can refer to these drivers to enable camera functionali
 #### **Supported Intel IPU Devices:**
 
 * **Panther Lake-H Customer Reference Board**
+* **Arrow Lake-U/H Customer Reference Board**
 
 
 You can use DownGit to download specified camera driver package folder.
