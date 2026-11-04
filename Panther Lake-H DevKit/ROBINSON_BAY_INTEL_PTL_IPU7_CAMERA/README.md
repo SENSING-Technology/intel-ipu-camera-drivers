@@ -94,30 +94,32 @@ System I/O --> Digital IO Port Configuration -->
   Check the log output to identify the device node associated with each camera.
 
   ```
-  Discovered topology:
-      CAM2  \_SB_.PC00.DES0.CH02.SER2.CAM2     isx031 22-001a  (model=isx031, hid=INTC113C)
-      SER3  \_SB_.PC00.DES0.CH03.SER3          max96717 17-0040
-      CAM3  \_SB_.PC00.DES0.CH03.SER3.CAM3     isx031 23-001a  (model=isx031, hid=INTC113C)
-    DES1  \_SB_.PC00.DES1                    max96724 1-0027 -> Intel IPU7 CSI2 2 (capture base /dev/video16)
-      SER1  \_SB_.PC00.DES1.CH01.SER1          max96717 18-0040
-      CAM1  \_SB_.PC00.DES1.CH01.SER1.CAM1     isx031 24-001a  (model=isx031, hid=INTC113C)
-      SER2  \_SB_.PC00.DES1.CH02.SER2          max96717 19-0040
-      CAM2  \_SB_.PC00.DES1.CH02.SER2.CAM2     isx031 25-001a  (model=isx031, hid=INTC113C)
+WARN: DES1 link 0: serializer at \_SB_.PC00.DES1.CH00.SER0 has no v4l-subdev (driver loaded?); skipping
+WARN: DES1 link 1: serializer at \_SB_.PC00.DES1.CH01.SER1 has no v4l-subdev (driver loaded?); skipping
+WARN: DES1 link 2: serializer at \_SB_.PC00.DES1.CH02.SER2 has no v4l-subdev (driver loaded?); skipping
+WARN: DES1 link 3: serializer at \_SB_.PC00.DES1.CH03.SER3 has no v4l-subdev (driver loaded?); skipping
+WARN: DES1 (\_SB_.PC00.DES1): no supported cameras discovered; skipping
+Discovered topology:
+  DES0  \_SB_.PC00.DES0                    max96724 0-0027 -> Intel IPU7 CSI2 0 (capture base /dev/video0)
+    SER0  \_SB_.PC00.DES0.CH00.SER0          max96717 4-0040
+    CAM0  \_SB_.PC00.DES0.CH00.SER0.CAM0     isx031 22-001a  (model=isx031, hid=INTC113C)
+    SER1  \_SB_.PC00.DES0.CH01.SER1          max96717 15-0040
+    CAM1  \_SB_.PC00.DES0.CH01.SER1.CAM1     isx031 23-001a  (model=isx031, hid=INTC113C)
+    SER2  \_SB_.PC00.DES0.CH02.SER2          max96717 16-0040
+    CAM2  \_SB_.PC00.DES0.CH02.SER2.CAM2     isx031 24-001a  (model=isx031, hid=INTC113C)
+    SER3  \_SB_.PC00.DES0.CH03.SER3          max96717 17-0040
+    CAM3  \_SB_.PC00.DES0.CH03.SER3.CAM3     isx031 25-001a  (model=isx031, hid=INTC113C)
 
 
-  Configuration summary:
-    DES0 LINK0     Sensor model    isx031
-                  Stream          [single] 1920x1536  UYVY8_1X16    30.000 FPS -->  /dev/video0
-    DES0 LINK1     Sensor model    isx031
-                  Stream          [single] 1920x1536  UYVY8_1X16    30.000 FPS -->  /dev/video1
-    DES0 LINK2     Sensor model    isx031
-                  Stream          [single] 1920x1536  UYVY8_1X16    30.000 FPS -->  /dev/video2
-    DES0 LINK3     Sensor model    isx031
-                  Stream          [single] 1920x1536  UYVY8_1X16    30.000 FPS -->  /dev/video3
-    DES1 LINK1     Sensor model    isx031
-                  Stream          [single] 1920x1536  UYVY8_1X16    30.000 FPS -->  /dev/video17
-    DES1 LINK2     Sensor model    isx031
-                  Stream          [single] 1920x1536  UYVY8_1X16    30.000 FPS -->  /dev/video18
+Configuration summary:
+  DES0 LINK0	 Sensor model	 isx031
+                 Stream          [single] 1920x1536  UYVY8_1X16    30.000 FPS -->  /dev/video0
+  DES0 LINK1	 Sensor model	 isx031
+                 Stream          [single] 1920x1536  UYVY8_1X16    30.000 FPS -->  /dev/video1
+  DES0 LINK2	 Sensor model	 isx031
+                 Stream          [single] 1920x1536  UYVY8_1X16    30.000 FPS -->  /dev/video2
+  DES0 LINK3	 Sensor model	 isx031
+                 Stream          [single] 1920x1536  UYVY8_1X16    30.000 FPS -->  /dev/video3
   ```
 
 5.2 Print the camera frame rate
