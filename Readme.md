@@ -12,7 +12,7 @@ Users of SENSING cameras can refer to these drivers to enable camera functionali
 
 * **Panther Lake-H DevKit**
 
-  ![DevKit](.\Panther Lake-H DevKit\ROBINSON_BAY_INTEL_PTL_IPU7_CAMERA\pictures\device_dark_centered.png)
+  ![DevKit](Panther%20Lake-H%20DevKit/ROBINSON_BAY_INTEL_PTL_IPU7_CAMERA/pictures/device_dark_centered.png)
 
 
 You can use DownGit to download specified camera driver package folder.
