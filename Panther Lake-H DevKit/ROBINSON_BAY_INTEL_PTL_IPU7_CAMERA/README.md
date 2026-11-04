@@ -139,6 +139,16 @@ Configuration summary:
       ! videoconvert \
       ! autovideosink sync=false
   ```
+5.4 Modify the video link
+
+  If you are using the same PORT port and have not connected all four cameras, you need to follow the following steps to change the configuration file in order to obtain the correct images.
+
+  a.Locate the corresponding asl configuration file in the acpi/ipu7/robinson_bay directory.
+
+  b.Depending on the actual connection method, comment out the link paths that are not connected.
+
+  For instance, I am using the ISX031F camera, which is connected to PORT0, 1, and 2 of the GMSL0 port. Port 3 is not connected to the camera.Then you need to modify the corresponding ASL file, acpi/ipu7/robinson_bay/8_isx031f_frame_sync.asl.In Device (DES0), disable all settings for LINK3,
+  Then run the "install.sh" script again to compile and install, and finally restart and configure the pipeline.
 
 #### 6. Camera Trigger Sync
 
